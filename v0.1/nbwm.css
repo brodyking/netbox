@@ -1,0 +1,48 @@
+body {
+	color: black;
+	font-family: 'Courier New', monospace;
+	letter-spacing: -1px;
+	margin: 0px;
+	background-color: lightgrey;
+}
+.nav {
+	background-color: white;
+	display: block;
+	width: 99.4%;
+	text-align: center;
+	padding: 4px;
+}
+button {
+	background-color: #4E0000;
+	border: 1px solid white;
+	color: white;
+}
+button:hover {
+	background-color: #B00000;
+}
+.popup {
+	width: 600px;
+	height: 300px;
+	border: 4px solid #800000;
+	position: absolute;
+	background-color: white;
+}
+.top {
+	width: 100%;
+	background-color: #800000;
+	color: white;
+	text-align: center;
+	border-bottom: 4px solid #800000;
+}
+#preinput {
+	color: #800000;
+}
+#terminalinput {
+	color: #800000;
+}
+highlight {
+	color: #800000;
+}
+#block {
+	display: none;
+}

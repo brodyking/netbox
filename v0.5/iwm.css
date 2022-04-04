@@ -1,0 +1,76 @@
+body {
+	color: white;
+	font-family: 'Courier New', monospace;
+	letter-spacing: -1px;
+	margin: 0px;
+	background-color: #383a59;
+}
+.iwmnav {
+	background-color: #2a2a39;
+	color: white;
+	display: block;
+	width: 100%;
+	height: 16px;
+	font-size: 0.9em;
+}
+iwmlink {
+	background-color: #6272a4	; 
+	margin-right: 10px;
+}
+.nav span {
+	padding: 3px;
+}
+button {
+	background-color: #282a36;
+	border: 1px solid white;
+	color: white;
+	padding: 0px;
+	font-family: 'Courier New', monospace
+}
+button:hover {
+	background-color: #b499d4;
+}
+#terminaltop button {
+	padding-left: 3px;
+	padding-right: 3px;
+}
+.popup {
+	width: 600px;
+	height: 300px;
+	border: 4px solid #282a36;
+	position: absolute;
+	background-color: #13141c;
+	display: block;
+}
+.popupbody {
+	overflow: hidden;
+	overflow-y: auto;
+	max-height: 270px;
+}
+.top {
+	width: 100%;
+	background-color: #282a36;
+	color: white;
+	text-align: center;
+	border-bottom: 2px solid #282a36;
+}
+#preinput {
+	color: #b48ded;
+}
+#terminalinput {
+	color: #d9e181;
+}
+highlight {
+	color: #b48ded;
+}
+#block {
+	display: none;
+}
+termhead {
+	display: block;
+	background-color: #343746;
+	color: white;
+	width: 100%;
+	height:auto;
+	text-align: right;
+}
