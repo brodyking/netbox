@@ -1,5 +1,8 @@
 // Variables
 
+var username = 'root';
+var computer = 'netbox';
+
 function terminalSubmit() { // terminal command subbmitted
   document.getElementById('terminalinput').addEventListener('keyup', function (evt) {
       if (evt.keyCode === 13) { // if enter key pressed
@@ -9,7 +12,7 @@ function terminalSubmit() { // terminal command subbmitted
   }
 
 function terminal() {
-popupCreate("terminal",'<div id="terminline"><span id="terminaloutput"></span><span id="preinput">root@netbox $ </span><span contenteditable="true" id="terminalinput" onclick="selectText(this.id)">_</span></div><div id="termblock"></div>');
+popupCreate("terminal",'<div id="terminline"><span id="terminaloutput"></span><span id="preinput">' + username + '@' + computer + ' $ </span><span contenteditable="true" id="terminalinput" onclick="selectText(this.id)">_</span></div><div id="termblock"></div>');
 // checking if you submitted a command // starts the listner for enter key pressed. function above.
 }
 // Highlight Script
@@ -132,7 +135,7 @@ commands["js"] = "eval(document.getElementById('terminalinput').textContent.slic
 commands["version"] = "terminline('<b>user: </b>root@netbox<br><b>window-manager: </b>" + wm + "<br><b>version: </b> 0.5<br><b>last-updated: </b> 03/18/2022')";
 
 function commandLookup() { // looks at the list of commands
-	document.getElementById("terminaloutput").innerHTML += "<highlight>root@netbox  $ " + document.getElementById("terminalinput").textContent + "</highlight><br>";
+	document.getElementById("terminaloutput").innerHTML += "<highlight>" + username + '@' + computer + " $ " + document.getElementById("terminalinput").textContent + "</highlight><br>";
 	if (commands[document.getElementById('terminalinput').textContent.split(' ').shift()] == undefined) { // checks if it is unset
 		terminline(document.getElementById("terminalinput").textContent + " is not a valid command.") // tells the user it is not real
 	} else { // if it is a command
