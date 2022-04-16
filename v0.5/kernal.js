@@ -54,7 +54,7 @@ function popupCreate(title, body) { // start function
     //if (title == "terminal") {
     //  document.body.innerHTML += '<div id="' + title + '" style="top: 30px; left: 5px;" class="popup" onmouseenter="terminalSubmit();dragElement(document.getElementById(' + "'" + title + "'" + '));popupCurrentlyFocused = ' + "'" + title + "'" + '"><div class="top" id="' + title + 'top">' + title + '<button style="float: right;margin-left: 3px;" class="popupCloseButton" onclick="popupClose(' + "'" + title + "'" + ')">x</button></div><div class="popupbody">' + body + '</div></div>';
     //} else {
-		document.body.innerHTML += '<div id="' + title + '" style="top: 30px; left: 5px;" class="popup" onmouseenter="dragElement(document.getElementById(' + "'" + title + "'" + '));popupCurrentlyFocused = ' + "'" + title + "'" + '"><div class="top" id="' + title + 'top">' + title + '<button style="float: right;margin-left: 3px;" class="popupCloseButton" onclick="popupClose(' + "'" + title + "'" + ')">x</button></div><div class="popupbody">' + body + '</div></div>';
+		document.body.innerHTML += '<div id="' + title + '" style="top: 30px; left: 5px;" class="popup" onmouseenter="dragElement(document.getElementById(' + "'" + title + "'" + '));popupCurrentlyFocused = ' + "'" + title + "'" + '"><div class="top" id="' + title + 'top">' + title + '<button style="float: right;margin-left: 3px;" class="popupCloseButton" onclick="popupClose(' + "'" + title + "'" + ')">x</button></div><div class="popupbody" id="' + title + 'popupbody">' + body + '</div></div>';
     //}
   }
   terminalSubmit()
@@ -132,7 +132,7 @@ commands["help"] = "termblock('<termhead><u style=" + '"' + "float: left" + '"' 
 commands["echo"] = "terminline(document.getElementById('terminalinput').textContent.slice(4,Infinity))";
 commands["clear"] = "document.getElementById('terminaloutput').innerHTML = ''";
 commands["js"] = "eval(document.getElementById('terminalinput').textContent.slice(3,Infinity));terminline('<highlight> ' + document.getElementById('terminalinput').textContent.slice(3,Infinity) + '</highlight> was run by the OS.')";
-commands["version"] = "terminline('<b>user: </b>root@netbox<br><b>window-manager: </b>" + wm + "<br><b>version: </b> 0.5<br><b>last-updated: </b> 03/18/2022')";
+commands["version"] = "terminline('<b>user: </b>" + username + '@' + computer + "<br><b>window-manager: </b>" + wm + "<br><b>version: </b> 0.5<br><b>last-updated: </b> 03/18/2022')";
 
 function commandLookup() { // looks at the list of commands
 	document.getElementById("terminaloutput").innerHTML += "<highlight>" + username + '@' + computer + " $ " + document.getElementById("terminalinput").textContent + "</highlight><br>";
