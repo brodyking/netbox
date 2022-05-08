@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Popups [netdocs]</title>
+        <link rel="stylesheet" href="../assets/style.css">
+        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    </head>
+    <body>
+        <nav id="top" class="top">
+            <div style="display: inline-block;float: left;"><h1 style="font-weight: normal;margin-bottom: 0px;">NetDocs</h1>A extensive guide to netbox.</div>
+            <div style="display: inline-block;float: right;margin-top: 2em;" id="toplinks">/* PLEASE ENABLE JAVASCRIPT */</div>
+        </nav>
+        <br><br><br><br><br>
+        <div id="left" class="left">
+            /* PLEASE ENABLE JAVASCRIPT */
+        </div>
+        <div id="right" class="right">
+            <h2>Popups</h2>
+            Popups are a very fundemental thing in netbox. Without them, creating a GUI for your app is very cumbersome and almost impossible.<br>
+            <br>
+            <a href="example.png"><img src="example.png"></a><br>
+            <br>
+            Some people try to make their programs work inside the terminal, but here are a few reasons why you should not do that.
+            <ul>
+                <li>They can be difficult to write</li>
+                <li>They can be confusing for a end user</li>
+                <li>They can make multitasking impossible</li>
+            </ul>
+            To create a popup, you can use the pre-programmed javascript function listed below.<br>
+            <br>
+            <pre>popupCreate(title,body)</pre>
+            To execute javascript inside of netbox, use the <code>js</code> command. If you dont know what Im talking about, go back to <a href="../the-terminal/">the terminal</a> page.<br>
+            <br>
+            Here is a example program that makes a popup with a title of <i>test popup</i> and a body that says <i>go die in a fire</i><br>
+            <br>
+            <pre>root@netbox $ js popupCreate('test popup','go die in a fire');</pre>
+            If you want to create more complex apps, then dont worry. You can always include HTML inside of your popup.<br>
+            <br>
+            <h3>Resizing the popup</h3>
+            By default, you will not be able to change the height or width of the popup. If you want to do this, you must access the DOM.
+            The easiest way is just to copy this javascript code.<br>
+            <br>
+            <pre>document.getElementById('WINDOWTITLE').style.width = 'YOURWIDTHpx';
+document.getElementById('WINDOWTITLE').style.height = 'YOURHEIGHTpx';</pre>
+            Replace WINDOWTITLE with the name you gave your window. You can include spaces. Change YOURHEIGHT to be a number. PLEASE REMEMBER TO KEEP THE <code>px</code> AT THE END.<br>
+            <br>
+            <h3>Closing Popups</h3>
+            To close your popup and other ones, you can use the pre-programmed javascript function listed below.<br>
+            <br>
+            <pre>popupClose('WINDOWTITLE');</pre>
+            Replace WINDOWTITLE with the title of the popup you made. You can include spaces.
+        </div>
+        <script src="../assets/script.js"></script>
+    </body>
+</html>

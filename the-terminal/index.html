@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Terminal [netdocs]</title>
+        <link rel="stylesheet" href="../assets/style.css">
+        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    </head>
+    <body>
+        <nav id="top" class="top">
+            <div style="display: inline-block;float: left;"><h1 style="font-weight: normal;margin-bottom: 0px;">NetDocs</h1>A extensive guide to netbox.</div>
+            <div style="display: inline-block;float: right;margin-top: 2em;" id="toplinks">/* PLEASE ENABLE JAVASCRIPT */</div>
+        </nav>
+        <br><br><br><br><br>
+        <div id="left" class="left">
+            /* PLEASE ENABLE JAVASCRIPT */
+        </div>
+        <div id="right" class="right">
+            <h2>The Terminal</h2>
+            To use NetBox, you must know how to use the terminal and what it offers.<br>
+            <br>
+            <a href="the-terminal.png"><img src='the-terminal.png'></a><br>
+            <br>
+            <h3>echo</h3> lets you echo text back at you through the terminal. Here is a example.<br>
+            <br>
+            <pre>root@netbox $ echo hi
+hi</pre>
+            <h3>clear</h3> lets you clear the terminal.<br>
+            <br>
+            <h3>js</h3> lets you run javascript through the terminal. Here is a example.<br>
+            <br>
+            <pre>root@netbox $ js terminline('hi');
+hi
+terminline('hi'); was run by the OS.</pre>
+            <h3>version</h3> shows your OS info including version and DE. Here is a example.<br>
+            <br>
+            <pre>root@netbox $ version
+user: root@netbox
+window-manager: nbwm
+version: 0.6
+last-updated: 04/18/2022</pre>
+            <h3>cf</h3> lets you create a file. Here is a example.<br>
+            <br>
+<pre>root@netbox $ cf hi
+hi was created.</pre>
+            <h3>ef</h3> lets you edit a file with kedit. Here is a example.<br>
+            <br>
+            <h3>rf</h3> lets you read a file inside the terminal. Here is a example.<br>
+            <br>
+<pre>root@netbox $ rf hi
+I LOVE MEN</pre>
+            <h3>df</h3> lets you delete a file inside the terminal. Here is a example.<br>
+            <br>
+<pre>root@netbox $ df hi
+hi was deleted.</pre>
+            <h3>install</h3> lets you install a program. Here is a example.<br>
+            <br>
+<pre>root@netbox $ install https://brodyking.github.io/netbox-packages/install.js
+The appsInstaller successfully finished. Please reboot to see the changes.</pre>
+            <h3>tempinstall</h3> lets you install a program that will delete itself next reboot. Here is a example.<br>
+            <br>
+<pre>root@netbox $ tempinstall https://brodyking.github.io/netbox-packages/script.js</pre>
+<h3>reboot</h3> lets you reboot the system.<br>
+
+
+        </div>
+        <script src="../assets/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Installing Apps [netdocs]</title>
+        <link rel="stylesheet" href="../assets/style.css">
+        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    </head>
+    <body>
+        <nav id="top" class="top">
+            <div style="display: inline-block;float: left;"><h1 style="font-weight: normal;margin-bottom: 0px;">NetDocs</h1>A extensive guide to netbox.</div>
+            <div style="display: inline-block;float: right;margin-top: 2em;" id="toplinks">/* PLEASE ENABLE JAVASCRIPT */</div>
+        </nav>
+        <br><br><br><br><br>
+        <div id="left" class="left">
+            /* PLEASE ENABLE JAVASCRIPT */
+        </div>
+        <div id="right" class="right">
+            <h2>Installing Apps</h2>
+            Out of the box you are missing some components you might want. Mainly, a web browser.
+            Thankfully there is one that I have created. Before we install the browser though, lets install a package manager.<br>
+            <br>
+            <h3>Why do we need a package manager?</h3>
+            Having all of our packages in one place makes it really nice to install and update them.
+            We will be using <a href="https://github.com/brodyking/netbox-packages/">netbox-packages</a> repository. It contains <strong>brew</strong>, our browser, and other apps you might like.<br>
+            <br>
+            To install netbox-packages, type the following command into netbox. DO NOT COPY PASTE IT, IT WILL NOT WORK.<br>
+            <br>
+            <pre>root@netbox $ install https://brodyking.github.io/netbox-packages/install.js</pre>
+            reboot your system and you should be good to go!<br>
+            <br>
+            <h3>Using the package manager</h3>
+            The command to install packages is <code>pmi [package name]</code>.
+            To install brew, type the following command. DONT COPY PASTE!<br><br>
+            <pre>root@netbox $ pmi brew
+====================================
+Your package is finished installing!
+====================================</pre>
+After installing brew, type the following command to view my website!<br>
+<br>
+<pre>root@netbox $ brew https://bkjs.us</pre>
+Please remember some websites will not work because they are blocking iFrames.
+        </div>
+        <script src="../assets/script.js"></script>
+    </body>
+</html>

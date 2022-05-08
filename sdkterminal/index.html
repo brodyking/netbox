@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Popups [netdocs]</title>
+        <link rel="stylesheet" href="../assets/style.css">
+        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    </head>
+    <body>
+        <nav id="top" class="top">
+            <div style="display: inline-block;float: left;"><h1 style="font-weight: normal;margin-bottom: 0px;">NetDocs</h1>A extensive guide to netbox.</div>
+            <div style="display: inline-block;float: right;margin-top: 2em;" id="toplinks">/* PLEASE ENABLE JAVASCRIPT */</div>
+        </nav>
+        <br><br><br><br><br>
+        <div id="left" class="left">
+            /* PLEASE ENABLE JAVASCRIPT */
+        </div>
+        <div id="right" class="right">
+            <h2>Terminal</h2>
+            Your app cannot function without the terminal. For some apps, the most you will ever do with it inside the terminal, is launch it.
+            In other apps, you can change whole config settings, launch specific areas, etc.<br>
+            <br>
+            <h3>Outputting text</h3>
+            To echo text back to the console, you can use a pre-programmed js function.<br>
+            <br>
+            <pre>terminline(text)</pre>
+            It works the same way <code>echo</code> works.<br>
+            <br>
+            <h3>Adding custom commands</h3>
+            Too add a custom command, we first must learn how to terminal works behind the scenes.<br><br>
+            When you submit a query, the command is searched through a array. If it dosent exist, then the terminal gives a error.
+            But if it exists, it runs the JS code attached. The array is called <code>commands[]</code> and adding to it is very easy.<br>
+            <br>
+            <pre>commands["testcommand"] = "terminline('hi')";</pre>
+            Here is what it looks like if we run the <code>testcommand</code> now.<br>
+            <br>
+            <pre>root@netbox $ testcommand
+hi</pre>
+            <b>PLEASE NOTE: YOU CANNOT ADD SPACES WHEN ADDING A COMMAND.</b><br>
+            <br>
+            <h3>Gathering User Input</h3>
+            Most commands you are familiar with gather some sort of user input. In this tutorial, we will recreate the echo command, which collects text from the user, and then returns it back out at them.<br>
+            <br>First, we need to use the DOM to get the data from the input box. All user input is kept in a element with the id <code>terminalinput</code> This makes gathering data very easy.
+            Just use this line of js to get the raw text.<br>
+            <br>
+            <pre>document.getElementById('terminalinput').textContent</pre>
+            To seperate just a certain part of the text, we can use the <code>slice()</code> function.<br>
+            <br>
+            <pre>document.getElementById('terminalinput').textContent.slice(8,Infinity)</pre>
+            I am going to skip ahead and write the entire program out right here with comments.<br>
+            <br>
+            <pre>function echoStart() { // Creates a function so that are code is more organized
+    var echoTextToBe = document.getElementById('terminalinput').textContent.slice(8,Infinity); // Gets the text from terminalinput
+    terminline(echoTextToBe); // Writes the text back to the user
+}
+
+commands["echofake"] = "echoStart()"; // Assigns the command to the function</pre>
+            <h3>Terminal Apps <span style='color: red'>(DEPRECATED)</span></h3>
+            While it is <b>STRONGLY</b> recommended to NOT use this, I am still going to document it because it is a part of netbox and can be valuable to learn.<br>
+            <br>
+            To enter fullscreen terminal mode, you use the <code>termblock(body)</code> function. Here is a example.<br>
+            <br>
+            <pre>termblock("hello world");</pre>
+            <a href="fst.png"><img src='fst.png'></a><br>
+            <br>
+        </div> 
+        <script src="../assets/script.js"></script>
+    </body>
+</html>

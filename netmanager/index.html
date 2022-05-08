@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NetManager [netdocs]</title>
+        <link rel="stylesheet" href="../assets/style.css">
+        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    </head>
+    <body>
+        <nav id="top" class="top">
+            <div style="display: inline-block;float: left;"><h1 style="font-weight: normal;margin-bottom: 0px;">NetDocs</h1>A extensive guide to netbox.</div>
+            <div style="display: inline-block;float: right;margin-top: 2em;" id="toplinks">/* PLEASE ENABLE JAVASCRIPT */</div>
+        </nav>
+        <br><br><br><br><br>
+        <div id="left" class="left">
+            /* PLEASE ENABLE JAVASCRIPT */
+        </div>
+        <div id="right" class="right">
+            <h2>NetManager</h2>
+            NetManager is a Start-Menu like program that allows users to quickly access shortcuts to applications and commands.<br>
+            <br>
+            <a href="screenshot.png"><img src="screenshot.png"></a><br>
+            <br>
+            <h3>Installing</h3>
+            Please use the <a href="https://github.com/brodyking/netbox-packages/">netbox-packages</a> package manager to install NetManager as it is the easiest way.<br><br>
+            <pre>root@netbox $ pmi netmanager
+====================================
+Your package is finished installing!
+====================================</pre>    
+            <h3>Usage</h3>
+            NetManager is complicated at first and can be very annoying to setup. I will try to make it as easy as possible.<br>
+            <br>
+            To open NetManager, click the <code>`</code> key on your keyboard.<br>
+            <br>
+            To modify the contents of the menu, edit the nmConfig file. (NOTE: YOU MUST USE <a href='../tse'>TSE</a>. THE DEFAULT ef TEXT EDITOR WILL NOT WORK.)<br>
+            <br>
+            <pre>root@netbox $ tse nmConfig
+TSE was opened in a new window.</pre>
+            The file will look somthing like this.<br>
+            <br>
+            <pre>&lt;li&gt;&lt;a href="#" onclick="terminal();">terminal&lt;/a&gt;&lt;/li&gt;</pre>
+            Here, you can make new list items and assign onclick values to them. Here is my nmConfig. (you can copy paste this)<br>
+            <br>
+            <pre>&lt;li&gt;&lt;a href="#" onclick="terminal();"&gt;terminal&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#" onclick="tsconf();"&gt;tsconf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#" onclick="terminal();document.getElementById('terminalinput').innerHTML = 'tse autorun';commandLookup();"&gt;autorun&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#" onclick="terminal();document.getElementById('terminalinput').innerHTML = 'tse nmConfig';commandLookup();"&gt;nmConfig&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#" onclick="location.reload()"&gt;reboot&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#" onclick="terminal();document.getElementById('terminalinput').innerHTML = 'pm';commandLookup();"&gt;pm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#" onclick="terminal();document.getElementById('terminalinput').innerHTML = 'brew';commandLookup();"&gt;brew&lt;/a&gt;&lt;/li&gt;</pre>
+</div>
+        <script src="../assets/script.js"></script>
+    </body>
+</html>

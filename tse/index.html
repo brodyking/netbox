@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TSE [netdocs]</title>
+        <link rel="stylesheet" href="../assets/style.css">
+        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    </head>
+    <body>
+        <nav id="top" class="top">
+            <div style="display: inline-block;float: left;"><h1 style="font-weight: normal;margin-bottom: 0px;">NetDocs</h1>A extensive guide to netbox.</div>
+            <div style="display: inline-block;float: right;margin-top: 2em;" id="toplinks">/* PLEASE ENABLE JAVASCRIPT */</div>
+        </nav>
+        <br><br><br><br><br>
+        <div id="left" class="left">
+            /* PLEASE ENABLE JAVASCRIPT */
+        </div>
+        <div id="right" class="right">
+            <h2>TSE</h2>
+            TSE is a text editor included inside of TypeSet that was ported over to other window managers.<br>
+            <br>
+            <a href="screenshot.png"><img src="screenshot.png"></a><br>
+            <br>
+            <h3>Installing</h3>
+            Please use the <a href="https://github.com/brodyking/netbox-packages/">netbox-packages</a> package manager to install TSE as it is the easiest way. We will need 2 packages to get this to work<br><br>
+            <pre>root@netbox $ pmi tseport
+====================================
+Your package is finished installing!
+====================================
+</pre>    
+<pre>root@netbox $ pmi tsethemes
+====================================
+Your package is finished installing!
+====================================</pre>  
+            <h3>Usage</h3>
+            Just use it as if you were using ef, but type tse instead!<br>
+            <br>
+<pre>root@netbox $ tse hello
+TSE was opened in a new window.</pre>
+            <h3>The Advantages of TSE</h3>
+            Kedit and TSE are very different in how they render the text. The built in tools render HTML inside the document.
+            Say you tried to edit nmConfig, well it would not work because it would render the elements.
+            TSE dosent render them, it just writes out them as text, allowing you to edit it.<br>
+            <br>
+        <script src="../assets/script.js"></script>
+    </body>
+</html>
